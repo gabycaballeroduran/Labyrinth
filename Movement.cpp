@@ -1,6 +1,7 @@
 #include "Movement.h"
 #include <QKeyEvent>
-// Movement with the arrow keys
+
+// Movement
 void Movement::keyPressEvent(QKeyEvent *event){
    if(event->key() == Qt::Key_Left){
        setPos(x()-5,y());
