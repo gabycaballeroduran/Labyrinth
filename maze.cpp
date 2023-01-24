@@ -17,7 +17,7 @@ int** maze::easy()
      for(int x = 0; x< x_map; x=x+40){
 
          for(int y = 0; y< y_map; y =y+30){
-             if((( y>0 && y<(y_map-1) && x>0 && x<(x_map-1) ) && (arc4random()%8<2))){
+             if((( y<(y_map-1) && y>0 && x>0 && x<(x_map-1) ) &&(arc4random()%8<2))){
                  list[x][y] = 1;
              }
              else{
@@ -41,7 +41,7 @@ int** maze::hard()
      for(int x = 0; x< x_map; x=x+35){
 
          for(int y = 0; y< y_map; y =y+25){
-             if((( y>0 && y<(y_map-1) && x>0 && x<(x_map-1) ) && (arc4random()%10<3))){
+             if((( y<(y_map-1) && y> 49 && x>45 && x<(x_map-1) ) && (arc4random()%10<3.3))){
                  list[x][y] = 1;
              }
              else{

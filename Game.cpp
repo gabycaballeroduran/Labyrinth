@@ -24,7 +24,7 @@ void Game::start(){
     Easy();
     drawGUI();
 
-    // create the play button for Menu
+    // create the play button for the Menu
     Button* menu = new Button(QString("Menu"));
     int bxPos2 =0;
     int byPos2 =100;
@@ -32,20 +32,15 @@ void Game::start(){
     connect(menu,SIGNAL(clicked()),this,SLOT(displayMainMenu()));
     scene->addItem(menu);
 
-
-    //QGraphicsTextItem *info = new QGraphicsTextItem(timer.toString("m:ss"));
-    //QFont titleFont("comic sans",50);
-    //info->setFont(titleFont);
-    //info->setPos(10,0);
-    //scene->addItem(info);
 }
+
 void Game::startHard(){
     // clear the screen
     scene->clear();
     Hard();
-    drawGUIHard();
+    drawGUI();
 
-    // create the play button for Menu
+    // create the play button for the Menu
     Button* menu = new Button(QString("Menu"));
     int bxPos2 =0;
     int byPos2 =100;
@@ -69,32 +64,8 @@ void Game::drawGUI(){
     // draw the left panel
     drawPanel(0,0,100,768,Qt::lightGray,1);
 
-
-    // Text of left panel
-    QGraphicsTextItem *info = new QGraphicsTextItem("Info");
-    QFont titleFont("comic sans",50);
-    info->setDefaultTextColor(Qt::white);
-    info->setFont(titleFont);
-    info->setPos(10,0);
-    scene->addItem(info);
-
-
 }
 
-void Game::drawGUIHard(){
-    // draw the left panel
-    drawPanel(0,0,100,768,Qt::lightGray,1);
-
-
-    // Text of left panel
-    QGraphicsTextItem *info = new QGraphicsTextItem("Info");
-    QFont titleFont("comic sans",50);
-    info->setFont(titleFont);
-    info->setPos(10,0);
-    scene->addItem(info);
-
-
-}
 
 void Game::Easy(){
     drawPanel(0,15,500,768,Qt::white,1);
@@ -169,7 +140,7 @@ void Game::Hard(){
                 QGraphicsRectItem *item = new QGraphicsRectItem();
                 item->setPos(i,j);
                 item ->setBrush(Qt::black);
-                item->setRect(0,0,5,40);
+                item->setRect(0,0,5,28);
                 scene->addItem(item);
             }
 
@@ -181,7 +152,7 @@ void Game::Hard(){
                 QGraphicsRectItem *item = new QGraphicsRectItem();
                 item->setPos(j+10,i);
                 item ->setBrush(Qt::black);
-                item->setRect(0,0,30,5);
+                item->setRect(0,0,28,5);
                 scene->addItem(item);
             }
 

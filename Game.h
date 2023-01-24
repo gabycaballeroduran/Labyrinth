@@ -17,10 +17,9 @@ public:
 
     // public attributes
     QGraphicsScene* scene;
-    QGraphicsScene* scene2;
     maze* m;
-    short int minutes;
-    short int seconds;
+    QTimer * timer = new QTimer();
+    QGraphicsTextItem *t;
 
 public slots:
     void start();
